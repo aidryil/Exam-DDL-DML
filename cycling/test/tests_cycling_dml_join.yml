@@ -1,0 +1,137 @@
+judge: sql
+name: cycling
+package: cycling/queries/join
+date: "2022-02-20 23:59:00"
+tag: PracticeBasicJoin
+
+init:
+  - file: create_schema_cycling.sql
+  - file: insert_data_cycling.sql
+exercises:
+  query_01:
+    output: |
+      +-----------------------+----------+
+      | name                  | category |
+      +-----------------------+----------+
+      | Alto del Naranco      | 1        |
+      | Coll de la Comella    | 1        |
+      | Navacerrada           | 1        |
+      | Puerto de Alisas      | 1        |
+      | Puerto de la Morcuera | 2        |
+      | Puerto de Navalmoral  | 2        |
+      | Sierra Nevada         | E        |
+      +-----------------------+----------+
+
+  query_02:
+    output: |
+      +--------------------------+-------+------+
+      | name                     | stage | km   |
+      +--------------------------+-------+------+
+      | Sierra Nevada            |     2 |  180 |
+      | Alto del Naranco         |    10 |  200 |
+      | Arcalís                  |    10 |  200 |
+      | Coll de la Comella       |    10 |  200 |
+      | Coll de Ordino           |    10 |  200 |
+      | Cerler-Circo de Ampriu   |    11 |  195 |
+      | Cruz de la Demanda       |    11 |  195 |
+      | Puerto de Alisas         |    15 |  207 |
+      | Lagos de Covadonga       |    16 |  160 |
+      | Puerto de Mijares        |    18 |  195 |
+      | Puerto de Navalmoral     |    18 |  195 |
+      | Puerto de Pedro Bernardo |    18 |  195 |
+      | Navacerrada              |    19 |  190 |
+      | Puerto de la Morcuera    |    19 |  190 |
+      +--------------------------+-------+------+
+
+  query_03:
+    output: |
+      +-----------------+--------------------+
+      | name            | trainer            |
+      +-----------------+--------------------+
+      | Amore Vita      | Ricardo Padacci    |
+      | Banesto         | Miguel Echevarría  |
+      | Bresciali-Refin | Pietro Armani      |
+      | Carrera         | Luigi Petroni      |
+      | Gatorade        | Gian Luca Pacceli  |
+      | Kelme           | Álvaro Pino        |
+      | Mapei-Clas      | Juan Fernández     |
+      | Navigare        | Lonrenzo Sciacci   |
+      | Telecom         | Morgan Reikcard    |
+      | TVM             | Steveens Henk      |
+      +-----------------+--------------------+
+
+  query_04:
+    output: |
+      +----------------------+---------------------+
+      | name                 | color               |
+      +----------------------+---------------------+
+      | Alessio Di Basco     | Rosa                |
+      | Alex Zulle           | Amarillo            |
+      | Alfonso Gutiérrez    | Rojo                |
+      | Alfonso Gutiérrez    | Verde               |
+      | Armand de las Cuevas | Estrellitas moradas |
+      | Bruno Leali          | Rojo                |
+      | Claudio Chiappucci   | Blanco y rojo       |
+      | Davide Cassani       | Rojo                |
+      | Dimitri Konishev     | Rojo                |
+      | Eddy Seigneur        | Estrellitas moradas |
+      | Gianni Bugno         | Blanco y rojo       |
+      | Giorgio Furlan       | Rosa                |
+      | Jean Van Poppel      | Rosa                |
+      | Jesús Montoya        | Blanco y rojo       |
+      | Laurent Jalabert     | Verde               |
+      | Marco Saligari       | Rojo                |
+      | Mario Cipollini      | Rosa                |
+      | Melchor Mauri        | Amarillo            |
+      | Melchor Mauri        | Blanco y rojo       |
+      | Miguel Indurain      | Amarillo            |
+      | Miguel Indurain      | Blanco y rojo       |
+      | Miguel Indurain      | Rojo                |
+      | Miguel Indurain      | Rosa                |
+      | Miguel Indurain      | Verde               |
+      | Mikel Zarrabeitia    | Amarillo            |
+      | Mikel Zarrabeitia    | Blanco y rojo       |
+      | Pedro Delgado        | Amarillo            |
+      | Pedro Delgado        | Blanco y rojo       |
+      | Per Pedersen         | Rosa                |
+      | Stefano della Santa  | Rojo                |
+      | Tony Rominger        | Amarillo            |
+      +----------------------+---------------------+
+
+  query_05:
+    output: |
+      +-----------------+-------+
+      | name            | stage |
+      +-----------------+-------+
+      | Miguel Indurain |     1 |
+      | Miguel Indurain |     8 |
+      | Pedro Delgado   |    10 |
+      | Pedro Delgado   |    19 |
+      | Pedro Delgado   |    20 |
+      | Tony Rominger   |    17 |
+      +-----------------+-------+
+
+  query_06:
+    output: |
+      +----+
+      | id |
+      +----+
+      |  4 |
+      |  7 |
+      |  8 |
+      | 10 |
+      | 12 |
+      | 15 |
+      | 17 |
+      | 18 |
+      | 20 |
+      +----+
+
+  query_07:
+    output: |
+      +-----------------+-------+
+      | name            | stage |
+      +-----------------+-------+
+      | Miguel Indurain |     1 |
+      +-----------------+-------+
+

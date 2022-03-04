@@ -1,0 +1,128 @@
+judge: sql
+name: highschool
+package: highschool/queries/exam
+tag: ExamDML
+date: "2022-03-01 20:25"
+
+init:
+  - file: create_schema_highschool.sql
+  - file: insert_data_highschool.sql
+exercises:
+  query_01:
+    output: |
+      +------------+---------+---------------------------------------------+
+      | subject_id | acronym | name                                        |
+      +------------+---------+---------------------------------------------+
+      | 0369       | ISO     | Implantació de Sistemes Operatius en Xarxa  |
+      | 0370       | PAX     | Planificació i administració de xarxes      |
+      | 0483       | SI      | Sistemes Informàtics                        |
+      | 0484       | DBA     | Bases de Dades                              |
+      | 0485       | PRG     | Programació                                 |
+      | 0613       | DBK     | Desenvolupament Web en Entorn Servidor      |
+      +------------+---------+---------------------------------------------+
+
+  query_02:
+    output: |
+      +-----------+--------+-----------+
+      | dni       | name   | surname   |
+      +-----------+--------+-----------+
+      | 17286956H | Mar    | Sánchez   |
+      | 33847291P | Albert | Sánchez   |
+      | 40189039N | Enric  | Santacreu |
+      +-----------+--------+-----------+
+
+  query_03:
+    output: |
+      +-----------+---------+-----------+--------------+
+      | DNI       | name    | surname   | group_letter |
+      +-----------+---------+-----------+--------------+
+      | 32409818N | Marta   | Sanchis   | A            |
+      | 40189039N | Enric   | Santacreu | A            |
+      | 40625464N | Míriam  | Mas       | A            |
+      | 54289537S | Joan    | Català    | A            |
+      | 60839601R | Toni    | Sanchis   | A            |
+      | 68743667W | Anna    | Martí     | A            |
+      | 72404553R | Victor  | Martí     | A            |
+      | 87497335E | Paula   | Ramos     | A            |
+      +-----------+---------+-----------+--------------+
+
+  query_04:
+    output: |
+      +---------+-----------------------------------------------------------+------------+
+      | acronym | name                                                      | teacherDNI |
+      +---------+-----------------------------------------------------------+------------+
+      | DBA     | Bases de Dades                                            | 12359573V  |
+      | DBK     | Desenvolupament Web en Entorn Servidor                    | 17286956H  |
+      | DFT     | Desenvolupament Web en Entorn Client                      | 73903970W  |
+      | DPL     | Desplegament d’Aplicacions Web                            | 55739745G  |
+      | IDE     | Entorns de Desenvolupament                                | 17286956H  |
+      | LLM     | Llenguatge de marques i sistemes de gestió d'informació   | 93224949S  |
+      | PRG     | Programació                                               | 40454056T  |
+      | SI      | Sistemes Informàtics                                      | 93224949S  |
+      +---------+-----------------------------------------------------------+------------+
+
+  query_05:
+    output: |
+      +------------+---------+-----------------------------------------------------------+
+      | subject_id | acronym | name                                                      |
+      +------------+---------+-----------------------------------------------------------+
+      | 0371       | FHW     | Fonaments de maquinari                                    |
+      | 0374       | ASO     | Administració de sistemes operatius                       |
+      | 0375       | SXI     | Serveis de xarxa i Internet                               |
+      | 0378       | SAD     | Seguretat i alta disponibilitat                           |
+      | 0473       | LLM     | Llenguatge de marques i sistemes de gestió d'informació   |
+      | 0484       | DBA     | Bases de Dades                                            |
+      | 0612       | DFT     | Desenvolupament Web en Entorn Client                      |
+      | 0613       | DBK     | Desenvolupament Web en Entorn Servidor                    |
+      +------------+---------+-----------------------------------------------------------+
+
+  query_06:
+    output: |
+      +-----------+--------+----------+------------+
+      | DNI       | name   | surname  | birth_date |
+      +-----------+--------+----------+------------+
+      | 38620245W | Teresa | Mas      | 2002-08-16 |
+      | 88279831N | Aitana | Bertomeu | 2002-08-16 |
+      +-----------+--------+----------+------------+
+
+  query_07:
+    output: |
+      +------------+---------+-----------------------------------------------------------+---------------+
+      | subject_id | acronym | name                                                      | average_grade |
+      +------------+---------+-----------------------------------------------------------+---------------+
+      | 0473       | LLM     | Llenguatge de marques i sistemes de gestió d'informació   |      7.300000 |
+      | 0483       | SI      | Sistemes Informàtics                                      |      6.766667 |
+      | 0484       | DBA     | Bases de Dades                                            |      7.850000 |
+      | 0485       | PRG     | Programació                                               |      7.250000 |
+      | 0487       | IDE     | Entorns de Desenvolupament                                |      6.900000 |
+      | 0612       | DFT     | Desenvolupament Web en Entorn Client                      |      7.900000 |
+      | 0613       | DBK     | Desenvolupament Web en Entorn Servidor                    |      7.225000 |
+      | 0614       | DPL     | Desplegament d’Aplicacions Web                            |      6.300000 |
+      | 0616       | PRJ     | Projecte de Desenrotllament d'Aplicacions Web             |      6.250000 |
+      +------------+---------+-----------------------------------------------------------+---------------+
+  query_08:
+    output: |
+      +--------+------------+---------+-----------------------------------------------------------+
+      | course | subject_id | acronym | name                                                      |
+      +--------+------------+---------+-----------------------------------------------------------+
+      | ASIX   | 0373       | LLM     | Llenguatge de marques i sistemes de gestió d'informació   |
+      +--------+------------+---------+-----------------------------------------------------------+
+
+  query_09:
+    output: |
+      +------------+-----------------+-----------+
+      | studentDNI | failed_subjects | tutorDNI  |
+      +------------+-----------------+-----------+
+      | 40625464N  |               4 | 93224949S |
+      +------------+-----------------+-----------+
+
+  query_10:
+    output: |
+      +---------+------------+---------+-----------------------------------------------------------+
+      | acronym | subject_id | acronym | name                                                      |
+      +---------+------------+---------+-----------------------------------------------------------+
+      | ASIX    | 0374       | ASO     | Administració de sistemes operatius                       |
+      | DAW     | 0484       | DBA     | Bases de Dades                                            |
+      | DAW     | 0613       | DBK     | Desenvolupament Web en Entorn Servidor                    |
+      | DAW     | 0473       | LLM     | Llenguatge de marques i sistemes de gestió d'informació   |
+      +---------+------------+---------+-----------------------------------------------------------+

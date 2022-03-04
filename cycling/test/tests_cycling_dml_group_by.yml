@@ -1,0 +1,136 @@
+judge: sql
+name: cycling
+package: cycling/queries/group_by
+date: "2022-03-06 23:59:00"
+tag: PracticeSubqueriesGroupBy
+
+init:
+  - file: create_schema_cycling.sql
+  - file: insert_data_cycling.sql
+exercises:
+  query_01:
+    output: |
+      +----+--------+
+      | id | climbs |
+      +----+--------+
+      |  2 |      1 |
+      | 10 |      4 |
+      | 11 |      2 |
+      | 15 |      1 |
+      | 16 |      1 |
+      | 18 |      3 |
+      | 19 |      2 |
+      +----+--------+
+
+  query_02:
+    output: |
+      +-----------------+----------+
+      | name            | cyclists |
+      +-----------------+----------+
+      | Amore Vita      |        3 |
+      | Artiach         |        7 |
+      | Banesto         |       11 |
+      | Bresciali-Refin |        4 |
+      | Carrera         |        3 |
+      | Castorama       |        2 |
+      | Euskadi         |        2 |
+      | Gatorade        |        4 |
+      | Gewiss          |        8 |
+      | Jolly Club      |        2 |
+      | Kelme           |        7 |
+      | Lotus Festina   |        3 |
+      | Mapei-Clas      |        7 |
+      | Mercatone Uno   |        8 |
+      | Motorola        |        3 |
+      | Navigare        |        5 |
+      | ONCE            |        5 |
+      | Seguros Amaya   |        3 |
+      | Telecom         |        4 |
+      | TVM             |        6 |
+      | Wordperfect     |        3 |
+      +-----------------+----------+
+
+  query_03:
+    output: |
+      +-----------------+----------+
+      | name            | cyclists |
+      +-----------------+----------+
+      | Amore Vita      |        3 |
+      | Artiach         |        7 |
+      | Banesto         |       11 |
+      | Bresciali-Refin |        4 |
+      | Carrera         |        3 |
+      | Castorama       |        2 |
+      | Euskadi         |        2 |
+      | Gatorade        |        4 |
+      | Gewiss          |        8 |
+      | Jolly Club      |        2 |
+      | Kelme           |        7 |
+      | Lotus Festina   |        3 |
+      | Mapei-Clas      |        7 |
+      | Mercatone Uno   |        8 |
+      | Motorola        |        3 |
+      | Navigare        |        5 |
+      | ONCE            |        5 |
+      | PDM             |        0 |
+      | Seguros Amaya   |        3 |
+      | Telecom         |        4 |
+      | TVM             |        6 |
+      | Wordperfect     |        3 |
+      +-----------------+----------+
+
+  query_04:
+    output: |
+      +---------------+------------------+
+      | name          | trainer          |
+      +---------------+------------------+
+      | Artiach       | José Pérez       |
+      | Gewiss        | Moreno Argentin  |
+      | Mercatone Uno | Ettore Romano    |
+      | Navigare      | Lonrenzo Sciacci |
+      | ONCE          | Manuel Sainz     |
+      | Telecom       | Morgan Reikcard  |
+      +---------------+------------------+
+
+  query_05:
+    output: |
+      +-----------------------+------+
+      | name                  | wins |
+      +-----------------------+------+
+      | Bo Hamburger          |    1 |
+      | Gert-Jan Theunisse    |    1 |
+      | Gian Matteo Fagnini   |    1 |
+      | Giorgio Furlan        |    1 |
+      | Hernán Buenahora      |    1 |
+      | Juan Martínez Oliver  |    1 |
+      | Mario Cipollini       |    1 |
+      | Miguel Indurain       |    2 |
+      | Pedro Delgado         |    3 |
+      | Tony Rominger         |    1 |
+      | Vladislav Bobrik      |    1 |
+      +-----------------------+------+
+
+  query_06:
+    output: |
+      +------------+-------------+
+      | name       | average_age |
+      +------------+-------------+
+      | Amore Vita |     32.0000 |
+      | Gatorade   |     32.0000 |
+      +------------+-------------+
+
+  query_07:
+    output: |
+      +--------------------+
+      | trainer            |
+      +--------------------+
+      | Miguel Echevarría  |
+      +--------------------+
+
+  query_08:
+    output: |
+      +---------------+
+      | name          |
+      +---------------+
+      | Pedro Delgado |
+      +---------------+

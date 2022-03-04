@@ -1,0 +1,98 @@
+judge: sql
+name: cycling
+package: cycling/queries/basic
+date: "2022-02-20 23:59:00"
+tag: PracticeBasicJoin
+
+init:
+  - file: create_schema_cycling.sql
+  - file: insert_data_cycling.sql
+exercises:
+  query_01:
+    output: |
+      +-----+--------------------+---------------------+---------+
+      | id  | type               | color               | prize   |
+      +-----+--------------------+---------------------+---------+
+      | MGE | General            | Amarillo            | 8000000 |
+      | MMO | Montaña            | Blanco y rojo       | 2000000 |
+      | MMS | Más sufrido        | Estrellitas moradas | 2000000 |
+      | MMV | Metas volantes     | Rojo                | 2000000 |
+      | MRE | Regularidad        | Verde               | 2000000 |
+      | MSE | Sprints especiales | Rosa                | 2000000 |
+      +-----+--------------------+---------------------+---------+
+
+  query_02:
+    output: |
+      +--------+-------------------+
+      | number | name              |
+      +--------+-------------------+
+      |     38 | Javier Palacín    |
+      |     41 | Rolf Aldag        |
+      |     46 | Agustín Sagasti   |
+      |     49 | Eugeni Berzin     |
+      |     66 | Enrico Zaina      |
+      |     98 | Eleuterio Anguita |
+      +--------+-------------------+
+
+  query_03:
+    output: |
+      +------------------------+--------+
+      | name                   | height |
+      +------------------------+--------+
+      | Arcalís                |   2230 |
+      | Cerler-Circo de Ampriu |   2500 |
+      | Coll de Ordino         |   1980 |
+      | Cruz de la Demanda     |   1850 |
+      | Lagos de Covadonga     |   1134 |
+      | Sierra Nevada          |   2500 |
+      +------------------------+--------+
+
+  query_04:
+    output: |
+      +----+
+      | id |
+      +----+
+      |  1 |
+      |  8 |
+      | 18 |
+      +----+
+
+  query_05:
+    output: |
+      +----------+
+      | count(*) |
+      +----------+
+      |      100 |
+      +----------+
+
+  query_06:
+    output: |
+      +----------+
+      | count(*) |
+      +----------+
+      |       94 |
+      +----------+
+
+  query_07:
+    output: |
+      +----------+
+      | count(*) |
+      +----------+
+      |       22 |
+      +----------+
+
+  query_08:
+    output: |
+      +----------+
+      | avg(age) |
+      +----------+
+      |  29.8900 |
+      +----------+
+
+  query_09:
+    output: |
+      +-------------+-------------+
+      | min(height) | max(height) |
+      +-------------+-------------+
+      |         565 |        2500 |
+      +-------------+-------------+
